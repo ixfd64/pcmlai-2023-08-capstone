@@ -24,31 +24,31 @@ The data set contains the following 27 features:
   * `command_memory_count` - bytes in memory for read and write command
   * `response_memory_count` - bytes in memory for read and write response
   * `command_length` - length of command packet
-  * `response_length` - length of response packet
+  * `resp_length` - length of response packet
   * `time` - elapsed time between command and response
   * `crc_rate` - CRC error rate
 * Packet payload attributes
-  * `comm_fun` - value of command function code
-  * `response_fun` - value of response function code
+  * `comm_read_function` - value of read command function code
+  * `comm_write_fun` - value of write command function code
+  * `resp_read_fun` - value of read response function code
+  * `resp_write_fun` - value of read response function code
   * `sub_function` - value of sub-function code
   * `measurement` - pipeline pressure
   * `control_mode` - categorical variable indicating the system's control mode (0 = shutdown, 1 = manual, 2 = automatic)
-  * `pump_state` - categorical variable indicating the pipeline's compressor state (0 = inactive, 1 = active)
-  * `manual_pump_setting` - categorical variable indicating the state of the manual pump setting (0 = inactive, 1 = active)
-  * `result` - manual classification of the attack type (0 = not an attack)
+  * `pump` - categorical variable indicating the pipeline's compressor state (0 = inactive, 1 = active)
 * Gas pipeline attributes
   * `setpoint` - configured gas pipeline pressure
   * `control_scheme` - gas pipeline control scheme
-  * `solenoid_state` - state of the solenoid used to control the pressure relief valve (0 = inactive, 1 = active)
+  * `solenoid` - state of the solenoid used to control the pressure relief valve (0 = inactive, 1 = active)
   * `gain` - value of gain parameter in PID controller
   * `reset` - value of reset parameter in PID controller
-  * `dead_band` - value of dead gain parameter in PID controller
+  * `deadband` - value of dead gain parameter in PID controller
   * `rate` - value of rate parameter in PID controller
   * `cycletime` - value of cycle time parameter in PID controller
 * Target variable
   * `result` - manual classification of the attack type (0 = not an attack)
 
-The `id` column was automatically created during the ARFF to CSV conversion process. It is a non-informative feature because each data point has a unique value.
+The `id` column was automatically created during the ARFF to CSV conversion process. Because each item under `id` has a unique value, this is a non-informative feature that will be removed during the data cleaning step. Furthermore, some features in the data set did not match those described in the paper. The features that were mentioned in the paper but absent from the data set are not listed here.
 
 ## Data cleaning
 
