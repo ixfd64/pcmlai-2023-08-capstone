@@ -6,7 +6,7 @@ This is the capstone project for UC Berkeley's [Professional Certificate in ML &
 
 Cyberattacks are a major issue in the industrial sector. As the number of connected systems and devices increases, so does the costs of cybercrime and malware. An attack on critical infrastructure could lead to serious consequences. However, artificial intelligence can be leveraged to analyze data and alert users of anomalies in real time. The ability to automatically detect and mitigate threats makes AI an invaluable tool in the modern world.
 
-This captone project examines data from an industrial control system for a gas pipeline as described in the paper "[Industrial Control System Network Traffic Data sets to Facilitate Intrusion Detection System Research](https://link.springer.com/chapter/10.1007/978-3-662-45355-1_5)" by Tommy Morris and Wei Gao. It aims to create a model to detect and classify simulated attacks, as well as provide insights on how artificial intelligence could be used to mitigate cyber threats in our increasingly connected world.
+This capstone project examines data from an industrial control system for a gas pipeline as described in the paper "[Industrial Control System Network Traffic Data sets to Facilitate Intrusion Detection System Research](https://link.springer.com/chapter/10.1007/978-3-662-45355-1_5)" by Tommy Morris and Wei Gao. It aims to create a model to detect and classify simulated attacks, as well as provide insights on how artificial intelligence could be used to mitigate cyber threats in our increasingly connected world.
 
 ## Data
 
@@ -14,9 +14,9 @@ The data set contains the following 27 features:
 
 * Attributes of command-response pair
   * `command_address` - device ID in command packet
-  * `response_address` - device ID in reponse packet
+  * `response_address` - device ID in response packet
   * `command_memory` - memory address in command packet
-  * `response_memory` - memory address in reponse packet
+  * `response_memory` - memory address in response packet
   * `command_memory_count` - bytes in memory for read and write command
   * `response_memory_count` - bytes in memory for read and write response
   * `command_length` - length of command packet
@@ -61,7 +61,7 @@ The `id` column was automatically created during the ARFF to CSV conversion proc
 * For the decision tree and random forest classifiers, dropping low-importance features resulted in a very slight drop in accuracy but did not significantly affect the time needed to train the models
 * Both the decision tree and random forest classifiers had 100% accuracy for the training data as well as a high accuracy for the test data. This suggests there is a clear pattern in the data as opposed to overfitting
 * Based on performance metrics and run time, either the histogram-based gradient-boosting machine or LightGBM could be selected as the model of choice
-* The above two models were selected for further optmization. Both models yielded the exact same accuracy score after hyperparameter tuning
+* The above two models were selected for further optimization. Both models yielded the exact same accuracy score after hyperparameter tuning
 * Experimentation has shown that the original data with outliers yielded a higher accuracy for all models. This is likely because the invalid values are indicative of an attack
 
 ### Recommendations
